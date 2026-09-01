@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper-50: #FCFBF9;
+  --color-paper-100: #F7F5F0;
+  --color-paper-200: #EFECE4;
+  --color-paper-300: #E2DEC2;
+  --color-paper-400: #C8C2B0;
+  --color-paper-500: #A39C89;
+
+  --color-ink-950: #070C18;
+  --color-ink-900: #0B132B;
+  --color-ink-850: #0E1A38;
+  --color-ink-800: #142145;
+  --color-ink-700: #1C2E5E;
+  --color-ink-600: #2A4382;
+  --color-ink-500: #4062B3;
+  --color-ink-400: #6B84C4;
+  --color-ink-300: #9EB0DB;
+
+  --color-clinical-teal: #0D9488;
+  --color-clinical-tealLight: #14B8A6;
+  --color-clinical-tealMuted: #CCFBF1;
+  --color-clinical-mint: #10B981;
+  --color-clinical-mintLight: #D1FAE5;
+  --color-clinical-emerald: #059669;
+
+  --color-rxAmber: #F59E0B;
+  --color-rxAmber-light: #FEF3C7;
+  --color-rxAmber-dark: #B45309;
+
+  --color-rxRed: #EF4444;
+  --color-rxRed-light: #FEE2E2;
+
+  --font-sans: 'Plus Jakarta Sans', Inter, sans-serif;
+  --font-handwriting: 'Caveat', cursive;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --shadow-paper-sm: 0 1px 3px rgba(11, 19, 43, 0.05), 0 1px 2px rgba(11, 19, 43, 0.03);
+  --shadow-paper: 0 4px 20px -2px rgba(11, 19, 43, 0.08), 0 2px 6px -1px rgba(11, 19, 43, 0.04);
+  --shadow-paper-lg: 0 12px 36px -4px rgba(11, 19, 43, 0.12), 0 4px 12px -2px rgba(11, 19, 43, 0.06);
+  --shadow-glow-teal: 0 0 24px -2px rgba(13, 148, 136, 0.35);
+  --shadow-glow-mint: 0 0 24px -2px rgba(16, 185, 129, 0.35);
+  --shadow-glow-amber: 0 0 24px -2px rgba(245, 158, 11, 0.35);
+}
+
+:root {
+  --paper-bg: #FCFBF9;
+  --paper-card: #FFFFFF;
+  --paper-border: #E8E5DD;
+  --ink-primary: #0B132B;
+  --ink-secondary: #3A4765;
+  --clinical-teal: #0D9488;
+  --clinical-mint: #10B981;
+  --rx-amber: #F59E0B;
+}
+
+body {
+  background-color: #F4F1EA;
+  color: #0B132B;
+  font-family: var(--font-sans);
+}
+
+/* Authentic Paper Canvas Texture */
+.paper-texture {
+  background-color: #FAF8F5;
+  background-image: radial-gradient(rgba(11, 19, 43, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.clinical-grid {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(13, 148, 136, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 148, 136, 0.06) 1px, transparent 1px);
+}
+
+.prescription-sheet {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F4 100%);
+  box-shadow: 
+    0 1px 2px rgba(11, 19, 43, 0.04),
+    0 8px 32px rgba(11, 19, 43, 0.08),
+    0 24px 64px rgba(11, 19, 43, 0.05);
+  border: 1px solid #EAE6DC;
+  position: relative;
+}
+
+.prescription-sheet::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #0D9488 0%, #10B981 50%, #0B132B 100%);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+/* Handwritten Doctor Script Accent */
+.doctor-script {
+  font-family: 'Caveat', cursive;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #162B55;
+}
+
+.doctor-script-faded {
+  font-family: 'Caveat', cursive;
+  font-weight: 500;
+  color: #2D4373;
+}
+
+/* AI Detection Highlighting & Pulsing Box */
+.ai-detected-box {
+  position: relative;
+  background-color: rgba(13, 148, 136, 0.08);
+  border: 1.5px dashed rgba(13, 148, 136, 0.8);
+  border-radius: 4px;
+  transition: all 0.25s ease-in-out;
+}
+
+.ai-detected-box:hover,
+.ai-detected-box.active {
+  background-color: rgba(13, 148, 136, 0.16);
+  border-color: #0D9488;
+  box-shadow: 0 0 12px rgba(13, 148, 136, 0.25);
+}
+
+.ai-detected-box.needs-verify {
+  background-color: rgba(245, 158, 11, 0.1);
+  border: 1.5px dashed rgba(245, 158, 11, 0.9);
+}
+
+/* Waveform Bars for Audio Equalizer */
+@keyframes wavePulse {
+  0%, 100% { height: 6px; }
+  50% { height: 26px; }
+}
+
+.wave-bar {
+  animation: wavePulse 1.2s ease-in-out infinite;
+  background-color: #0D9488;
+  border-radius: 9999px;
+  width: 3.5px;
+}
+
+.wave-bar:nth-child(2) { animation-delay: 0.15s; }
+.wave-bar:nth-child(3) { animation-delay: 0.3s; }
+.wave-bar:nth-child(4) { animation-delay: 0.45s; }
+.wave-bar:nth-child(5) { animation-delay: 0.2s; }
+.wave-bar:nth-child(6) { animation-delay: 0.35s; }
+.wave-bar:nth-child(7) { animation-delay: 0.1s; }
+.wave-bar:nth-child(8) { animation-delay: 0.5s; }
+
+/* Laser Scan Animation */
+@keyframes scanBeam {
+  0% { top: 0%; opacity: 0.8; }
+  50% { top: 100%; opacity: 1; }
+  100% { top: 0%; opacity: 0.8; }
+}
+
+.animate-scan-beam {
+  animation: scanBeam 3s ease-in-out infinite;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(11, 19, 43, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(11, 19, 43, 0.3);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
