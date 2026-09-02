@@ -418,7 +418,7 @@ MedBridge-AI/
 ### Khushi Kushwah
 **2nd Year · B.S. in AI & Data Science · IIT Jodhpur**
 
-📧 khushikushwah213@gmail.com 
+📧 khushikushwah213@gmail.com   
 💻 [GitHub](https://github.com/khushikushwah213)
 
 </td>
