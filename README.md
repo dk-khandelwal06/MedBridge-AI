@@ -194,6 +194,7 @@ A single inventory of every recorded treatment, categorized by source (allopathi
 
 ### 📱 Mobile Experience
 ![MedBridge Mobile View](slides/website_images/Phone%20View.png)
+
 The same phone-first experience, framed in a device simulator for demo purposes.
 
 ---
@@ -407,8 +408,8 @@ MedBridge-AI/
 ### Daksh Khandelwal
 **2nd Year · B.S. in AI & Data Science · IIT Jodhpur**
 
-📧 dk.khandelwaliit@gmail.com
-💼 [LinkedIn](https://www.linkedin.com/in/daksh-khandelwal-b02748391/)
+📧 dk.khandelwaliit@gmail.com  
+💼 [LinkedIn](https://www.linkedin.com/in/daksh-khandelwal-b02748391/)  
 💻 [GitHub](https://github.com/dk-khandelwal06)
 
 </td>
@@ -417,7 +418,7 @@ MedBridge-AI/
 ### Khushi Kushwah
 **2nd Year · B.S. in AI & Data Science · IIT Jodhpur**
 
-📧 khushikushwah213@gmail.com
+📧 khushikushwah213@gmail.com 
 💻 [GitHub](https://github.com/khushikushwah213)
 
 </td>
